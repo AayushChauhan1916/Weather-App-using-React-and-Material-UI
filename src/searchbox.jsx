@@ -38,11 +38,11 @@ export default function searchBox({updateInfo}){
             setCity("")
             let info = await fetchData()
             updateInfo(info)
+            seterror(false)
         }catch(err){
-            seterror(!error)
+            seterror(true)
         }  
-    }
-
+    }    
     return (
         <div>
             <h1>Weather App</h1>
